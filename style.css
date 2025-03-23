@@ -638,7 +638,7 @@ header {
     }
 }
 
-/* Extremely large screens */
+
 @media (min-width: 3440px) {
     .main-container {
         max-width: 3000px;
@@ -1218,7 +1218,7 @@ footer {
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .spicy-indicator img {
         width: 18px;
@@ -1230,5 +1230,52 @@ footer {
     .spicy-indicator img {
         width: 16px;
         height: 16px;
+    }
+}
+
+.order-sidebar {
+    position: fixed;
+    right: 20px;
+    top: 90px;
+    width: clamp(250px, 25vw, 300px);
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    padding: clamp(15px, 2vw, 20px);
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    min-width: 250px;
+    min-height: 200px;
+    transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .order-sidebar {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        top: auto !important;
+        width: 100% !important;
+        border-radius: 15px 15px 0 0 !important;
+        max-height: 60vh !important;
+    }
+
+
+    .main-container {
+        padding-bottom: 80px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .order-sidebar {
+        position: fixed !important;
+        top: 90px !important;
+        right: 15px !important;
+        width: 250px !important;
+        min-width: 250px !important;
     }
 }
