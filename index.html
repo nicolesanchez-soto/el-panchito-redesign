@@ -118,7 +118,7 @@
                     </div>
                 </div>
                 <!-- Chicken Nachos with popular tag -->
-                <div class="menu-item">
+                <div style="border-color: #3BB61C; border-width: 4px;" class="menu-item">
                     <img src="nacho4.jpg" alt="Chicken Nachos" class="menu-item-image">
                     <span class="popular-tag">Popular</span>
                     <div class="menu-item-content">
@@ -448,6 +448,10 @@
                     const addedToCart = document.createElement('div');
                     addedToCart.className = 'added-to-cart';
 
+                    const menuItem = button.closest('.menu-item');
+                    menuItem.style.borderColor = '#3BB61C';
+                    menuItem.style.borderWidth = '4px';
+
                     // Create check icon
                     const checkIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
                     checkIcon.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
@@ -592,7 +596,6 @@
             handleResponsiveLayout();
             window.addEventListener('resize', handleResponsiveLayout);
         });
-
 
 
     </script>
