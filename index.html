@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>El Panchito</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="El Panchito Logo">
+            <div class="logo-text">El Panchito</div>
+        </div>
+        <div class="header-controls">
+            <div class="language-selector">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="#1498DE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                </svg>
+                <span>English</span>
+            </div>
+            <div class="search-container">
+                <input style="font-size: 11px;" type="text" placeholder="Search menu items..." class="search-input">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="search-icon">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+            <div class="cart-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span>Cart</span>
+                <div class="cart-count">1</div>
+            </div>
+            <div class="sign-in-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>Sign In</span>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <!-- Left sidebar with menu categories -->
+        <aside class="sidebar">
+            <h2>Menu Categories</h2>
+            <div class="menu-categories">
+                <div class="menu-category active">
+                    Appetizers
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+                <div class="menu-category">Soups</div>
+                <div class="menu-category">Tacos</div>
+                <div class="menu-category">Burritos</div>
+                <div class="menu-category">Desserts</div>
+                <div class="menu-category">Quesadillas</div>
+                <div class="menu-category">Flautas</div>
+            </div>
+        </aside>
+        <!-- Main content area -->
+        <main class="menu-content">
+            <div class="filter-options">
+                <button class="filter-button active">All Items</button>
+                <button class="filter-button">Popular</button>
+                <button class="filter-button">
+                    <p></p>Spicy
+                    <img src="spicy.png" width="54" height="30" alt="Spicy icon">
+                </button>
+                <button class="filter-button">
+                    Vegetarian
+
+                </button>
+                <button class="filter-button">Gluten Free</button>
+            </div>
+            <div class="menu-section-title">
+                <h2>Appetizers</h2>
+                <span class="item-count">8 Items</span>
+            </div>
+            <div class="menu-items-grid">
+                <!-- Plain Nachos -->
+                <div class="menu-item">
+                    <img src="plain.jpg" alt="Plain Nachos" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <div class="menu-item-title">Plain Nachos</div>
+                            <div class="menu-item-price">$14.50</div>
+                        </div>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag vegetarian-tag">Vegetarian</span>
+                            <span class="menu-item-tag gluten-free-tag">Gluten Free</span>
+                        </div>
+                        <div class="menu-item-description">
+                            Crispy tortilla chips topped with melted cheese and served with a side of fresh salsa.
+                            Simple, crunchy, and delicious! Gluten-free option available!
+                        </div>
+                        <div class="menu-item-actions">
+                            <a href="#" class="customize-button">Customize</a>
+                            <button class="add-to-order-button">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chicken Nachos with popular tag -->
+                <div class="menu-item">
+                    <img src="nacho4.jpg" alt="Chicken Nachos" class="menu-item-image">
+                    <span class="popular-tag">Popular</span>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <div class="menu-item-title">Chicken Nachos</div>
+                            <div class="menu-item-price">$16.00</div>
+                        </div>
+                        <div class="menu-item-tags">
+                        </div>
+                        <div class="menu-item-description">
+                            Crispy tortilla chips piled high with melted cheese, tender grilled chicken, and a side of
+                            fresh salsa.
+                        </div>
+                        <div class="menu-item-actions">
+                            <a href="#" class="customize-button">Customize</a>
+                            <div class="added-to-cart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Added to Cart (1)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carnitas Nachos -->
+                <div class="menu-item">
+                    <span class="popular-tag">Popular</span>
+                    <div class="spicy-indicator">
+                        <img src="spicy.png" alt="Spicy">
+                        <img src="spicy.png" alt="Spicy">
+
+                    </div>
+                    <img src="nacho2.jpeg" alt="Carnitas Nachos" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <div class="menu-item-title">Carnitas Nachos</div>
+                            <div class="menu-item-price">$17.00</div>
+                        </div>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag spicy-tag">Spicy</span>
+                        </div>
+                        <div class="menu-item-description">
+                            Slow-cooked, seasoned pork piled onto crispy tortilla chips with melted cheese, served with
+                            fresh salsa.
+                        </div>
+                        <div class="menu-item-actions">
+                            <a href="#" class="customize-button">Customize</a>
+                            <button class="add-to-order-button">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Steak Nachos -->
+                <div class="menu-item">
+                    <div class="spicy-indicator">
+                        <img src="spicy.png" alt="Spicy">
+                        <img src="spicy.png" alt="Spicy">
+                        <img src="spicy.png" alt="Spicy">
+                    </div>
+                    <img src="nacho3.jpeg" alt="Steak Nachos" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <div class="menu-item-title">Steak Nachos</div>
+                            <div class="menu-item-price">$18.00</div>
+                        </div>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag spicy-tag">Spicy</span>
+                        </div>
+                        <div class="menu-item-description">
+                            Juicy, grilled steak layered over crispy tortilla chips and melted cheese, served with a
+                            side of fresh salsa.
+                        </div>
+                        <div class="menu-item-actions">
+                            <a href="#" class="customize-button">Customize</a>
+                            <button class="add-to-order-button">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chorizo Nachos -->
+                <div class="menu-item">
+                    <div class="spicy-indicator">
+                        <img src="spicy.png" alt="Spicy">
+
+                    </div>
+                    <img src="nacho5.jpeg" alt="Chorizo Nachos" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <div class="menu-item-title">Chorizo Nachos</div>
+                            <div class="menu-item-price">$18.00</div>
+                        </div>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag spicy-tag">Spicy</span>
+                        </div>
+                        <div class="menu-item-description">
+                            Spicy Mexican chorizo crumbled over tortilla chips with melted cheese, served with a side of
+                            fresh salsa.
+                        </div>
+                        <div class="menu-item-actions">
+                            <a href="#" class="customize-button">Customize</a>
+                            <button class="add-to-order-button">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Guacamole & Chips -->
+                <div class="menu-item">
+                    <img src="guac.jpeg" alt="Guacamole & Chips" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <div class="menu-item-title">Guacamole & Chips</div>
+                            <div class="menu-item-price">$18.00</div>
+                        </div>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag vegetarian-tag">Vegetarian</span>
+                        </div>
+                        <div class="menu-item-description">
+                            A generous serving of fresh, house-made guacamole served with crispy tortilla chips for
+                            dipping.
+                        </div>
+                        <div class="menu-item-actions">
+                            <a href="#" class="customize-button">Customize</a>
+                            <button class="add-to-order-button">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nachos Campechanos -->
+                <div class="menu-item">
+                    <span class="popular-tag">Popular</span>
+                    <img src="nacho-campe.png" alt="Nachos Campechanos" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <div class="menu-item-title">Nachos Campechanos</div>
+                            <div class="menu-item-price">$18.50</div>
+                        </div>
+                        <div class="menu-item-description">
+                            A flavorful mix of spicy chorizo, juicy flank steak, and crispy pork chicharrónes piled over
+                            crispy tortilla chips with
+                            melted cheese. Served with fresh salsa, cilantro, and onions.
+
+                            Add guacamole, sour cream, or jalapeños for the perfect bite!
+                        </div>
+                        <div class="menu-item-actions">
+                            <a href="#" class="customize-button">Customize</a>
+                            <button class="add-to-order-button">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Steak and Chorizo Nachos -->
+                <div class="menu-item">
+                    <div class="spicy-indicator">
+                        <img src="spicy.png" alt="Spicy">
+
+                    </div>
+                    <span class="popular-tag">Popular</span>
+                    <img src="nachos8.jpeg" alt="Steak & Chorizo Nachos" class="menu-item-image">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <div class="menu-item-title">Steak & Chorizo Nachos</div>
+                            <div class="menu-item-price">$15.50</div>
+                        </div>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag spicy-tag">Spicy</span>
+                        </div>
+                        <div class="menu-item-description">
+                            A bold combination of grilled steak and spicy chorizo over crispy tortilla chips with melted
+                            cheese, served with fresh
+                            salsa.
+
+                            Add guacamole, sour cream, or jalapeños for the perfect bite!
+                        </div>
+                        <div class="menu-item-actions">
+                            <a href="#" class="customize-button">Customize</a>
+                            <button class="add-to-order-button">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <!-- Right sidebar with current order -->
+        <aside class="order-sidebar">
+            <div class="order-header">
+                <div>Your Order (1 Item)</div>
+                <div class="expand-collapse">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <polyline points="9 21 3 21 3 15"></polyline>
+                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="order-items">
+                <div class="order-item">
+                    <div>Chicken Nachos x 1</div>
+                    <div>$16.00</div>
+                </div>
+            </div>
+            <div class="order-total">
+                <div>Total:</div>
+                <div>$16.00</div>
+            </div>
+            <button class="checkout-button">Checkout</button>
+        </aside>
+
+
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>FromTheRestaurant</h3>
+                <p>Questions / Comments</p>
+                <p>Please call Restaurant El Panchito</p>
+                <p><a href="tel:5704555424">(570) 455-5424</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <p><a href="#">FromTheRestaurant</a></p>
+                <p><a href="#">FOX Ordering</a></p>
+                <div class="footer-logos">
+                    <a href="#" class="logo-box ftr">F · TR</a>
+                    <a href="#" class="logo-box fox">FOX</a>
+                </div>
+            </div>
+
+            <div class="footer-section map-section">
+                <div class="map-container">
+                    <img src="map-placeholder.jpg" alt="Restaurant Map" class="footer-map">
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Restaurant El Panchito</h3>
+                <p>34 W 9th St</p>
+                <p>Hazleton PA 18201</p>
+                <p><a href="tel:5704555424">(570) 455-5424</a></p>
+                <div class="hours">
+                    <p>Sun 11:30 am - 7:30 pm</p>
+                    <p>Mon 11:30 am - 8:30 pm</p>
+                    <p>Tue 11:30 am - 8:30 pm</p>
+                    <p>Thu 11:30 am - 8:30 pm</p>
+                    <p>Fri 11:30 am - 8:30 pm</p>
+                    <p>Sat 11:30 am - 8:30 pm</p>
+                </div>
+                <p class="allergy-note">Please call for allergy information.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Website Accessibility</a></p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add arrow icon to menu categories
+            function updateMenuCategoryArrows() {
+                const menuCategories = document.querySelectorAll('.menu-category');
+                const isMobile = window.innerWidth <= 768;
+                menuCategories.forEach(category => {
+                    // Remove any existing arrows
+                    const existingArrow = category.querySelector('svg');
+                    if (existingArrow) {
+                        category.removeChild(existingArrow);
+                    }
+                    // Add arrow only to active category
+                    if (category.classList.contains('active')) {
+                        const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                        arrow.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+                        arrow.setAttribute('width', '16');
+                        arrow.setAttribute('height', '16');
+                        arrow.setAttribute('viewBox', '0 0 24 24');
+                        arrow.setAttribute('fill', 'none');
+                        arrow.setAttribute('stroke', 'currentColor');
+                        arrow.setAttribute('stroke-width', '2');
+                        arrow.setAttribute('stroke-linecap', 'round');
+                        arrow.setAttribute('stroke-linejoin', 'round');
+                        // Use downward arrow (V) for mobile, rightward arrow (>) for desktop
+                        if (isMobile) {
+                            const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+                            polyline.setAttribute('points', '6 9 12 15 18 9');
+                            arrow.appendChild(polyline);
+                        } else {
+                            const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+                            polyline.setAttribute('points', '9 18 15 12 9 6');
+                            arrow.appendChild(polyline);
+                        }
+                        category.appendChild(arrow);
+                    }
+                });
+            }
+            // Menu category selection
+            const menuCategories = document.querySelectorAll('.menu-category');
+            menuCategories.forEach(category => {
+                category.addEventListener('click', () => {
+                    menuCategories.forEach(c => c.classList.remove('active'));
+                    category.classList.add('active');
+                    updateMenuCategoryArrows();
+                });
+            });
+            // Initialize arrows
+            updateMenuCategoryArrows();
+            // Filter buttons
+            const filterButtons = document.querySelectorAll('.filter-button');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    button.classList.add('active');
+                });
+            });
+            // Add to order buttons
+            const addButtons = document.querySelectorAll('.add-to-order-button');
+            addButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Create added to cart element
+                    const addedToCart = document.createElement('div');
+                    addedToCart.className = 'added-to-cart';
+
+                    // Create check icon
+                    const checkIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                    checkIcon.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+                    checkIcon.setAttribute('width', '16');
+                    checkIcon.setAttribute('height', '16');
+                    checkIcon.setAttribute('viewBox', '0 0 24 24');
+                    checkIcon.setAttribute('fill', 'none');
+                    checkIcon.setAttribute('stroke', 'white');
+                    checkIcon.setAttribute('stroke-width', '2');
+                    checkIcon.setAttribute('stroke-linecap', 'round');
+                    checkIcon.setAttribute('stroke-linejoin', 'round');
+
+                    const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+                    polyline.setAttribute('points', '20 6 9 17 4 12');
+                    checkIcon.appendChild(polyline);
+
+                    // Create text content
+                    const textNode = document.createTextNode('Added to Cart (1)');
+
+                    // Append to the added to cart element
+                    addedToCart.appendChild(checkIcon);
+                    addedToCart.appendChild(textNode);
+
+                    // Replace the button with our new element
+                    const parentElement = button.parentElement;
+                    parentElement.replaceChild(addedToCart, button);
+                });
+            });
+            // Order sidebar collapse functionality
+            const expandCollapse = document.querySelector('.expand-collapse');
+            const orderSidebar = document.querySelector('.order-sidebar');
+            const closeIcon = expandCollapse.querySelector('svg:nth-child(2)');
+            closeIcon.addEventListener('click', () => {
+                orderSidebar.classList.toggle('collapsed');
+            });
+            // Expand icon functionality
+            const expandIcon = expandCollapse.querySelector('svg:first-child');
+            expandIcon.addEventListener('click', () => {
+                if (orderSidebar.classList.contains('collapsed')) {
+                    orderSidebar.classList.remove('collapsed');
+                }
+            });
+            // Responsive behavior for order sidebar
+            function handleResponsiveLayout() {
+                const orderSidebar = document.querySelector('.order-sidebar');
+                const isMobile = window.innerWidth <= 768;
+                if (isMobile) {
+                    orderSidebar.style.position = 'sticky';
+                    orderSidebar.style.width = '100%';
+                    orderSidebar.style.bottom = '0';
+                    orderSidebar.style.right = 'auto';
+                    orderSidebar.style.top = 'auto';
+                } else {
+                    orderSidebar.style.position = 'fixed';
+                    orderSidebar.style.width = window.innerWidth <= 1080 ? '280px' : '300px';
+                    orderSidebar.style.right = '20px';
+                    orderSidebar.style.top = '90px';
+                    orderSidebar.style.bottom = 'auto';
+                }
+                // Update arrows for menu categories based on screen size
+                updateMenuCategoryArrows();
+                // Handle sign-in responsiveness - it should be the first to condense
+                const signInButton = document.querySelector('.sign-in-button');
+                const signInText = signInButton.querySelector('span');
+                if (isMobile) {
+                    signInText.style.display = 'none';
+                    signInButton.style.padding = '8px';
+                    signInButton.style.width = '40px';
+                    signInButton.style.height = '40px';
+                    signInButton.style.justifyContent = 'center';
+                    signInButton.style.borderRadius = '50%';
+                } else {
+                    signInText.style.display = 'inline';
+                    signInButton.style.padding = '8px 16px';
+                    signInButton.style.width = 'auto';
+                    signInButton.style.height = 'auto';
+                    signInButton.style.justifyContent = 'flex-start';
+                    signInButton.style.borderRadius = '25px';
+                }
+                // Handle search bar responsiveness
+                const searchContainer = document.querySelector('.search-container');
+                const searchInput = document.querySelector('.search-input');
+                const searchIcon = document.querySelector('.search-icon');
+                if (window.innerWidth <= 576) {
+                    searchContainer.style.width = '40px';
+                    searchContainer.style.height = '40px';
+                    searchContainer.style.display = 'flex';
+                    searchContainer.style.alignItems = 'center';
+                    searchContainer.style.justifyContent = 'center';
+                    searchContainer.style.backgroundColor = 'white';
+                    searchContainer.style.borderRadius = '50%';
+                    searchInput.style.display = 'none';
+                    searchIcon.style.position = 'static';
+                    searchIcon.style.transform = 'none';
+                    // At this size, collapse language and cart buttons too
+                    const langButton = document.querySelector('.language-selector');
+                    const langText = langButton.querySelector('span');
+                    langText.style.display = 'none';
+                    langButton.style.padding = '8px';
+                    langButton.style.width = '40px';
+                    langButton.style.height = '40px';
+                    langButton.style.justifyContent = 'center';
+                    langButton.style.borderRadius = '50%';
+                    const cartButton = document.querySelector('.cart-button');
+                    const cartText = cartButton.querySelector('span');
+                    cartText.style.display = 'none';
+                    cartButton.style.padding = '8px';
+                    cartButton.style.width = '40px';
+                    cartButton.style.height = '40px';
+                    cartButton.style.justifyContent = 'center';
+                    cartButton.style.borderRadius = '50%';
+                } else {
+                    searchContainer.style.width = 'auto';
+                    searchContainer.style.height = 'auto';
+                    searchContainer.style.display = 'block';
+                    searchContainer.style.backgroundColor = 'transparent';
+                    searchInput.style.display = 'block';
+                    searchIcon.style.position = 'absolute';
+                    searchIcon.style.transform = 'translateY(-50%)';
+                    // Restore language and cart buttons if needed (but not sign-in which collapses earlier)
+                    if (window.innerWidth > 576) {
+                        const langButton = document.querySelector('.language-selector');
+                        const langText = langButton.querySelector('span');
+                        langText.style.display = 'inline';
+                        langButton.style.padding = '8px 16px';
+                        langButton.style.width = 'auto';
+                        langButton.style.height = 'auto';
+                        langButton.style.justifyContent = 'flex-start';
+                        langButton.style.borderRadius = '25px';
+                        const cartButton = document.querySelector('.cart-button');
+                        const cartText = cartButton.querySelector('span');
+                        cartText.style.display = 'inline';
+                        cartButton.style.padding = '8px 16px';
+                        cartButton.style.width = 'auto';
+                        cartButton.style.height = 'auto';
+                        cartButton.style.justifyContent = 'flex-start';
+                        cartButton.style.borderRadius = '25px';
+                    }
+                }
+            }
+            // Initial call and resize listener
+            handleResponsiveLayout();
+            window.addEventListener('resize', handleResponsiveLayout);
+        });
+        // Add this to your existing JavaScript, inside the DOMContentLoaded event listener
+
+        // Filter scrolling indicators and responsive behavior
+        function setupFilterScrolling() {
+            const filterOptions = document.querySelector('.filter-options');
+
+            // Create view toggle button for small screens
+            const viewToggle = document.createElement('button');
+            viewToggle.className = 'filter-view-toggle';
+            viewToggle.textContent = 'Stack Filters';
+            filterOptions.parentElement.insertBefore(viewToggle, filterOptions);
+
+            // Create scroll indicators
+            const scrollIndicator = document.createElement('div');
+            scrollIndicator.className = 'scroll-indicator';
+            // Create 3 dots for indicators
+            for (let i = 0; i < 3; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'scroll-indicator-dot';
+                scrollIndicator.appendChild(dot);
+            }
+            filterOptions.appendChild(scrollIndicator);
+
+            // Function to check scroll position and update indicators
+            function updateScrollIndicators() {
+                const isScrollable = filterOptions.scrollWidth > filterOptions.clientWidth;
+
+                // Only show indicators if there's content to scroll
+                if (isScrollable) {
+                    // Show/hide the scroll indicator
+                    scrollIndicator.style.display = 'flex';
+
+                    // Determine which indicator dot should be active based on scroll position
+                    const scrollPercentage = filterOptions.scrollLeft /
+                        (filterOptions.scrollWidth - filterOptions.clientWidth);
+
+                    const dots = scrollIndicator.querySelectorAll('.scroll-indicator-dot');
+                    dots.forEach((dot, index) => {
+                        dot.classList.remove('active');
+                    });
+
+                    if (scrollPercentage < 0.33) {
+                        dots[0].classList.add('active');
+                    } else if (scrollPercentage < 0.66) {
+                        dots[1].classList.add('active');
+                    } else {
+                        dots[2].classList.add('active');
+                    }
+
+                    // Add fade indicators classes
+                    if (filterOptions.scrollLeft > 10) {
+                        filterOptions.classList.add('has-scroll-left');
+                    } else {
+                        filterOptions.classList.remove('has-scroll-left');
+                    }
+
+                    if (filterOptions.scrollLeft + filterOptions.clientWidth < filterOptions.scrollWidth - 10) {
+                        filterOptions.classList.add('has-scroll-right');
+                    } else {
+                        filterOptions.classList.remove('has-scroll-right');
+                    }
+                } else {
+                    // Hide indicators if not scrollable
+                    scrollIndicator.style.display = 'none';
+                    filterOptions.classList.remove('has-scroll-left', 'has-scroll-right');
+                }
+            }
+
+            // Toggle between stacked and horizontal views on small screens
+            viewToggle.addEventListener('click', () => {
+                filterOptions.classList.toggle('stacked-mode');
+                viewToggle.textContent = filterOptions.classList.contains('stacked-mode')
+                    ? 'Horizontal View'
+                    : 'Stack Filters';
+                updateScrollIndicators();
+            });
+
+            // Update indicators on scroll
+            filterOptions.addEventListener('scroll', updateScrollIndicators);
+
+            // Also check when window resizes
+            window.addEventListener('resize', () => {
+                updateScrollIndicators();
+
+                // Show/hide toggle button based on screen size
+                viewToggle.style.display = window.innerWidth <= 480 ? 'block' : 'none';
+
+                // Auto-switch to horizontal view on larger screens
+                if (window.innerWidth > 480 && filterOptions.classList.contains('stacked-mode')) {
+                    filterOptions.classList.remove('stacked-mode');
+                    viewToggle.textContent = 'Stack Filters';
+                }
+            });
+
+            // Add initial hint animation once page loads
+            setTimeout(() => {
+                if (filterOptions.scrollWidth > filterOptions.clientWidth) {
+                    filterOptions.classList.add('hint-scroll');
+                    setTimeout(() => {
+                        filterOptions.classList.remove('hint-scroll');
+                    }, 3000);
+                }
+            }, 1000);
+
+            // Initial update
+            updateScrollIndicators();
+
+            // Show/hide toggle button based on initial screen size
+            viewToggle.style.display = window.innerWidth <= 480 ? 'block' : 'none';
+        }
+
+        // Call the setup function
+        setupFilterScrolling();
+
+
+    </script>
+</body>
+
+</html>
